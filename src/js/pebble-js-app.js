@@ -1,11 +1,11 @@
 var initialized = false;
 
 function getOptions() {
-	var options = JSON.parse(window.localStorage.getItem('options'));
+	var options = JSON.parse(window.localStorage.getItem('bitwatcher_v1_options'));
 	
 	if(options == null) {
 		options = { currency: "USD", exchange: "", average: true, noGox: true };
-		window.localStorage.setItem('options', JSON.stringify(options));
+		window.localStorage.setItem('bitwatcher_v1_options', JSON.stringify(options));
 	}
 	return options;
 }
